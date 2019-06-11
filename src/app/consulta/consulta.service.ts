@@ -8,6 +8,6 @@ export class ConsultaService {
   constructor(private http:HttpClient) { }
 
   getConsultas(){
-    return this.http.get(environment.apiUrl + "/consulta");
+    return this.http.get(environment.apiUrl + "/consultas");
   }
 }

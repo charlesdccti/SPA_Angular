@@ -8,6 +8,6 @@ export class FaturamentoService {
   constructor(private http:HttpClient) { }
 
   getFaturamento(){
-    return this.http.get(environment.apiUrl + 'faturamento');
+    return this.http.get(environment.apiUrl + '/faturamento');
   }
 }
