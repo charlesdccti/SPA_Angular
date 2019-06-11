@@ -9,17 +9,18 @@ import { ConsultaService } from './consulta.service';
 export class ConsultaComponent implements OnInit, OnDestroy {
 
     consultas;
-    consultaInscricao;
+    inscricao;
+    erro;
 
-    constructor(private consultaService:ConsultaService ) { }
+    constructor(private consultaService:ConsultaService) { }
 
     ngOnInit() {
-        return this.consultaInscricao = this.consultaService.getConsultas()
-        .subscribe( dados => this.consultas = dados )
+        return this.inscricao = this.consultaService.getConsultas()
+        .subscribe( dados => this.consultas = dados, erro => this.erro = true )
     }
 
-    ngOnDestroy(): void {
-        this.consultaInscricao.subscribe();
+    ngOnDestroy(){
+        this.inscricao.unsubscribe();
     }
 
 }
