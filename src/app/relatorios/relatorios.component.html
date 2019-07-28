@@ -1,0 +1,30 @@
+<app-painel-simples
+  titulo="Gráficos com Componentes PrimeNG"
+  col="12"
+  tipo="primary">
+
+ <h1>Calendar: </h1>
+<div class="ui-g ui-fluid">
+  <p-calendar [(ngModel)]="date3" [showIcon]="true"></p-calendar>
+</div>
+
+<br />
+
+
+<div class="ui-g">
+  <div class="ui-g-6">
+    <h1>BarChart</h1>
+    <p-chart type="bar" [data]="data"></p-chart>
+  </div>
+  <div class="ui-g-6">
+    <h1>LineChart</h1>
+    <p-toast [style]="{marginTop: '80px'}"></p-toast>
+    <p-chart type="line" [data]="dataLine" (onDataSelect)="selectData($event)"></p-chart>
+  </div>
+  <div class="ui-g-12">
+    <h1>PieChart</h1> 
+    <p-chart type="pie" [data]="dataPie"></p-chart>
+  </div>
+</div>
+
+</app-painel-simples>
