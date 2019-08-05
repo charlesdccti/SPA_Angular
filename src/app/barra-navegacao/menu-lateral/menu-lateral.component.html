@@ -1,10 +1,10 @@
 <div class="menu" [class.menu-open]="menuAberto">
   <ul>
+    <li (click)="onToggle()"><a routerLink="/resumo">Resumo</a></li>
+    <li (click)="onToggle()"><a routerLink="/consultas">Consulta</a></li>
+    <li (click)="onToggle()"><a routerLink="/faturamento">Faturamento</a></li>
+    <li (click)="onToggle()"><a routerLink="/relatorios">Relatorios</a></li>
     <li class="visible-xs"><a href="#">Sair</a></li>
-    <li><a routerLink="/resumo">Resumo</a></li>
-    <li><a routerLink="/consultas">Consulta</a></li>
-    <li><a routerLink="/faturamento">Faturamento</a></li>
-    <li><a routerLink="/relatorios">Relatorios</a></li>
 
   </ul>
 </div> 
